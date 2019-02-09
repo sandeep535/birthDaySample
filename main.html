@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<style type="text/css">
+.sampleClass {
+	  width: 300px;
+	  height: 300px;
+	  position: absolute;
+	  opacity: 1;
+	  left: 50%;
+	  top: 60%;
+	  transform: translate(-50%, -50%);
+	  animation: myfirst 10s 1;
+ 	  animation-direction:normal;
+
+}
+.birthClass {
+	  width: 300px;
+	  height: 300px;
+	  position: absolute;
+	  opacity: 1;
+	  left: 50%;
+	  top: 60%;
+	  transform: translate(-50%, -50%);
+	  animation: myfirst 10s 1;
+ 	  animation-direction:normal;
+ 	  animation-delay: 8s;
+}
+.nameClass{
+	 width: 300px;
+	  height: 300px;
+	  position: absolute;
+	  opacity: 1;
+	  left: 50%;
+	  top: 60%;
+	  transform: translate(-50%, -50%);
+	  animation: myfirst 10s 1;
+ 	  animation-direction:normal;
+ 	  animation-delay: 15s;
+}
+
+#test p {
+    margin-top: 25px;
+    font-size: 100px;
+    color:	#1316CB;
+    text-align: center;
+    animation: fadein 5s;
+    -webkit-animation: fadein 5s; /* Safari and Chrome */
+}
+
+@-webkit-keyframes myfirst {
+  99% {
+    top: 0%;
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+    display: none;
+  }
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+.container {
+  display: flex;
+}
+.container > div {
+  flex: 1; /*grow*/
+}
+.sampleClass1 {
+  position: absolute;
+  left: 0px;
+  width: 300px;
+  padding: 10px;
+  text-align: center;
+  animation: fadein 5s;
+  -moz-animation: fadein 2s; /* Firefox */
+  -webkit-animation: fadein 5s; /* Safari and Chrome */
+  -o-animation: fadein 5s; /* Opera */
+  top: 50%;
+  transform: translate(-0%, -50%);
+
+}
+.sampleClass2 {
+  position: absolute;
+  right: 0px;
+  width: 300px;
+  padding: 10px;
+  text-align: center;
+  animation: fadein 5s;
+  -webkit-animation: fadein 5s; /* Safari and Chrome */
+  top: 50%;
+  transform: translate(-10%, -50%);
+}
+body {
+	background-image: url('https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX22997450.jpg');
+	background-repeat-x:no-repeat;
+	background-size:1000px;
+	-webkit-animation-name: test;
+ 	 -webkit-animation-duration: 3s;
+ 	 -webkit-animation-fill-mode: forwards;
+  	-webkit-animation-timing-function: ease-out;
+ }
+
+	</style>
+
+</head>
+<script type="text/javascript">
+	(function() {
+    var count =0;
+    window.setInterval(function() {
+    	if(count == 0)
+        document.body.style.backgroundImage= 'url(cake.jpg)';
+        count++;
+    }, 6000);
+})();
+</script>
+<body>
+	<div class="container">
+		<!-- <div class = 'sampleClass1'><img src="img1.png" alt="Flowers in Chania"></div> -->
+		<div class = 'sampleClass' id="test" style="opacity: 0"><p>Happy</p></div>
+		<div class = 'birthClass' id="test" style="opacity: 0"><p>Birthday</p></div>
+		<div class = 'nameClass' id="test" style="opacity: 0"><p>Name</p></div>
+		<!-- <div class = 'sampleClass2'><img src="img1.png" alt="Flowers in Chania"></div> -->
+	</div>
+</body>
+</html>
