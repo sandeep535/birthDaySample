@@ -3,6 +3,9 @@
 <head>
 	<title></title>
 <style type="text/css">
+html {
+    height: 100%
+}
 .sampleClass {
 	  width: 300px;
 	  height: 300px;
@@ -11,7 +14,7 @@
 	  left: 50%;
 	  top: 60%;
 	  transform: translate(-50%, -50%);
-	  animation: myfirst 10s 1;
+	  animation: myfirst 5s 1;
  	  animation-direction:normal;
 
 }
@@ -23,9 +26,9 @@
 	  left: 50%;
 	  top: 60%;
 	  transform: translate(-50%, -50%);
-	  animation: myfirst 10s 1;
+	  animation: myfirst 5s 1;
  	  animation-direction:normal;
- 	  animation-delay: 8s;
+ 	  animation-delay: 6s;
 }
 .nameClass{
 	 width: 300px;
@@ -35,9 +38,9 @@
 	  left: 50%;
 	  top: 60%;
 	  transform: translate(-50%, -50%);
-	  animation: myfirst 10s 1;
+	  animation: myfirst 6s 1;
  	  animation-direction:normal;
- 	  animation-delay: 15s;
+ 	  animation-delay: 12s;
 }
 
 #test p {
@@ -45,8 +48,8 @@
     font-size: 100px;
     color:	#1316CB;
     text-align: center;
-    animation: fadein 5s;
-    -webkit-animation: fadein 5s; /* Safari and Chrome */
+    animation: fadein 3s;
+    -webkit-animation: fadein 3s; /* Safari and Chrome */
 }
 
 @-webkit-keyframes myfirst {
@@ -82,16 +85,15 @@
 .container > div {
   flex: 1; /*grow*/
 }
-.sampleClass1 {
+/*.sampleClass1 {
   position: absolute;
   left: 0px;
   width: 300px;
   padding: 10px;
   text-align: center;
-  animation: fadein 5s;
-  -moz-animation: fadein 2s; /* Firefox */
-  -webkit-animation: fadein 5s; /* Safari and Chrome */
-  -o-animation: fadein 5s; /* Opera */
+  animation: fadein 3s;
+  -webkit-animation: fadein 3s; /* Safari and Chrome 
+  -o-animation: fadein 3s; /* Opera 
   top: 50%;
   transform: translate(-0%, -50%);
 
@@ -102,15 +104,20 @@
   width: 300px;
   padding: 10px;
   text-align: center;
-  animation: fadein 5s;
-  -webkit-animation: fadein 5s; /* Safari and Chrome */
+  animation: fadein 3s;
+  -webkit-animation: fadein 3s; /* Safari and Chrome 
   top: 50%;
   transform: translate(-10%, -50%);
+}*/
+body {
+    background-image:url("../images/myImage.jpg");
+    
 }
+
 body {
 	background-image: url('https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX22997450.jpg');
-	background-repeat-x:no-repeat;
-	background-size:1000px;
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
 	-webkit-animation-name: test;
  	 -webkit-animation-duration: 3s;
  	 -webkit-animation-fill-mode: forwards;
@@ -126,8 +133,10 @@ body {
     window.setInterval(function() {
     	if(count == 0)
         document.body.style.backgroundImage= 'url(cake.jpg)';
+    	if(count == 1)
+        document.body.style.backgroundImage= 'url(s2.jpg)';
         count++;
-    }, 6000);
+    }, 5000);
 })();
 </script>
 <body>
@@ -135,7 +144,7 @@ body {
 		<!-- <div class = 'sampleClass1'><img src="img1.png" alt="Flowers in Chania"></div> -->
 		<div class = 'sampleClass' id="test" style="opacity: 0"><p>Happy</p></div>
 		<div class = 'birthClass' id="test" style="opacity: 0"><p>Birthday</p></div>
-		<div class = 'nameClass' id="test" style="opacity: 0"><p>Sindhu</p></div>
+		<div class = 'nameClass' id="test" style="opacity: 0"><p>Name</p></div>
 		<!-- <div class = 'sampleClass2'><img src="img1.png" alt="Flowers in Chania"></div> -->
 	</div>
 </body>
